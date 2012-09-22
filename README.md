@@ -1,2 +1,2 @@
-thinkpad_tablet_jb_kernel
+See TPT JB device Tree
 =========================
