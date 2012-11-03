@@ -29,13 +29,13 @@ DHDOFILES = aiutils.o bcmsdh_sdmmc_linux.o dhd_linux.o siutils.o bcmutils.o   \
 
 obj-$(CONFIG_BCMDHD) += bcmdhd.o
 bcmdhd-objs += $(DHDOFILES)
-ifneq ($(CONFIG_WIRELESS_EXT),)
+ifneq ($(CONFIG_BCMDHD_WEXT),)
 bcmdhd-objs += wl_iw.o
 DHDCFLAGS += -DSOFTAP
 endif
 ifneq ($(CONFIG_CFG80211),)
 bcmdhd-objs += wl_cfg80211.o wl_cfgp2p.o dhd_linux_mon.o
-DHDCFLAGS += -DWL_CFG80211 -DBCMWAPI_WPI -DBCMWAPI_WAI
+DHDCFLAGS += -DWL_CFG80211
 endif
 EXTRA_CFLAGS = $(DHDCFLAGS)
 ifeq ($(CONFIG_BCMDHD),m)

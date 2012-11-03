@@ -68,9 +68,7 @@
 #define	ETHER_TYPE_BRCM		0x886c		
 #define	ETHER_TYPE_802_1X	0x888e		
 #define	ETHER_TYPE_802_1X_PREAUTH 0x88c7	
-#ifdef BCMWAPI_WPI
 #define ETHER_TYPE_WAI		0x88b4		
-#endif
 
 
 
